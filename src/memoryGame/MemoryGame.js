@@ -11,30 +11,34 @@ import Shirak from "./imgs/Shirak.jpg";
 import Syunik from "./imgs/Syunik.jpg";
 import Tavush from "./imgs/Tavush.jpg";
 import VayocDzor from "./imgs/VayocDzor.png";
+import Yerevan from './imgs/Yerevan.jpg'
 
 export default function MemoryGame() {
   const region = [
-    Aragacotn,
-    Ararat,
-    Armavir,
-    Gexarquniq,
-    Kotayk,
-    Lori,
-    Shirak,
-    Syunik,
-    Tavush,
-    VayocDzor,
+    { state: Aragacotn, val: 1 },
+    { state: Ararat, val: 2 },
+    { state: Armavir, val: 3 },
+    { state: Gexarquniq, val: 4 },
+    { state: Kotayk, val: 5 },
+    { state: Lori, val: 6 },
+    { state: Shirak, val: 7 },
+    { state: Syunik, val: 8 },
+    { state: Tavush, val: 9 },
+    { state: VayocDzor, val: 10 },
   ];
 
+  const choose = (num) => {
+    console.log(num);
+  };
   return (
     <div className={s.container}>
-      {region.map((item) => (
-        <div className={s.card}>
+      {region.map((item, i) => (
+        <div key={i} className={s.card} onClick={()=>choose(item.val)}>
           <div className={s.details}>
             <img alt="img" src={flag} />
           </div>
-          <div className={s.imgBox}>
-            <img alt="img" src={item} />
+          <div className={s.imgBox} >
+            <img alt="img" src={item.state} />
           </div>
         </div>
       ))}

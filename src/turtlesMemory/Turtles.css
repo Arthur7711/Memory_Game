@@ -1,0 +1,81 @@
+.memory {
+  background: #d0e0e6;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+  line-height: 1;
+  font-family: "Patrick Hand", sans-serif;
+  box-sizing: border-box;
+}
+
+.cards {
+  display: grid;
+  grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+  gap: 10px;
+}
+
+.turtle-card {
+  height: 150px;
+  width: 150px;
+  border-radius: 2px;
+  background: #000;
+  cursor: pointer;
+  background: none;
+  border: none;
+  outline: none;
+}
+
+.turtle-card.flipped .inner {
+  transform: rotateY(180deg);
+}
+
+.inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: 0.6s cubic-bezier(0.38, 0.02, 0.09, 1.66) all;
+}
+
+.turtle-card .front,
+.turtle-card .back {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  backface-visibility: hidden;
+}
+
+.turtle-card .front {
+  background: #fff;
+  transform: rotateY(180deg);
+}
+
+.turtle-card .back {
+  background: #51dce0;
+  color: #d6aeb5;
+  font-size: 100px;
+  transition: 0.3s ease all;
+}
+
+.turtle-card .back:hover {
+  background: #dba8b1;
+  color: #fff;
+  transform: scale(1.02);
+}
+.turtle {
+  width: 150px;
+  height: 150px;
+}
+.turtle img {
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+}

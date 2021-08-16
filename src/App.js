@@ -1,9 +1,9 @@
-import MemoryGame from "./memoryGame/MemoryGame";
+import Turtles from "./turtlesMemory/Turtles";
 
 function App() {
   return (
     <>
-    <MemoryGame />
+      <Turtles />
     </>
   );
 }

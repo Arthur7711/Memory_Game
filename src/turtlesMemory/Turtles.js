@@ -24,8 +24,6 @@ export default function Turtles() {
     { id: 8, name: michelangelo },
   ];
 
-  //currently there are 4 turtles but we need the pair
-
   const pairOfTurtles = [...turtles, ...turtles];
 
   function flipCard(index) {
@@ -50,8 +48,6 @@ export default function Turtles() {
       <div className="memoryGame">
         <div className="cards">
           {pairOfTurtles.map((turtle, index) => {
-            //lets flip the card
-
             let isFlipped = false;
 
             if (openedCard.includes(index)) isFlipped = true;

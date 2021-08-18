@@ -1,5 +1,6 @@
 .memory {
-  background: #d0e0e6;
+  /* background: #d0e0e6; */
+  background-color: black;
   min-height: 100vh;
   display: flex;
   justify-content: center;

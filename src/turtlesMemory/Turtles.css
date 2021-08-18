@@ -12,7 +12,7 @@
 
 .cards {
   display: grid;
-  grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+  grid-template: repeat(4, 1fr) / repeat(4, 1fr);
   gap: 10px;
 }
 
@@ -59,14 +59,14 @@
 }
 
 .turtle-card .back {
-  background: #51dce0;
+  background: #e051cd;
   color: #d6aeb5;
   font-size: 100px;
   transition: 0.3s ease all;
 }
 
 .turtle-card .back:hover {
-  background: #dba8b1;
+  background: #a8d9db;
   color: #fff;
   transform: scale(1.02);
 }

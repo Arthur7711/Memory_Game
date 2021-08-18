@@ -4,6 +4,10 @@ import donatello from "./imgs/donatello.png";
 import leonardo from "./imgs/leonardo.jpg";
 import raphael from "./imgs/raphael.jpg";
 import michelangelo from "./imgs/michelangelo.jpg";
+import keysi from "./imgs/keysi.jpg";
+import onil from "./imgs/Onil.jpg";
+import splinter from "./imgs/splinter.jpg";
+import shreder from "./imgs/shreder.jpg";
 
 export default function Turtles() {
   const [openedCard, setOpenedCard] = useState([]);
@@ -11,9 +15,13 @@ export default function Turtles() {
 
   const turtles = [
     { id: 1, name: donatello },
-    { id: 8, name: leonardo },
-    { id: 9, name: raphael },
-    { id: 6, name: michelangelo },
+    { id: 2, name: keysi },
+    { id: 3, name: leonardo },
+    { id: 4, name: raphael },
+    { id: 5, name: onil },
+    { id: 6, name: splinter },
+    { id: 7, name: shreder },
+    { id: 8, name: michelangelo },
   ];
 
   //currently there are 4 turtles but we need the pair
@@ -48,7 +56,7 @@ export default function Turtles() {
 
             if (openedCard.includes(index)) isFlipped = true;
             if (matched.includes(turtle.id)) isFlipped = true;
-            
+
             return (
               <div
                 className={`turtle-card ${isFlipped ? "flipped" : ""} `}
